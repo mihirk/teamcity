@@ -1,2 +1,2 @@
--	name: Create teamcity user
-  	user: name={{ teamcity_user }} home={{ teamcity_user_home }} comment="Teamcity User" generate_ssh_key=yes
+- name: Create teamcity user
+  user: name={{ teamcity_user }} home={{ teamcity_user_home }} comment="Teamcity User" generate_ssh_key=yes
