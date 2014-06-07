@@ -11,7 +11,8 @@
 
   "provisioners": [{
     "type": "ansible-local",
-    
+    "playbook_file": "provisioning/local.yml",
+    "inventory_file": provisioning/ansible_hosts"
   }]
 
 }

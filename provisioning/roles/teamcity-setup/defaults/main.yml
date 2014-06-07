@@ -1,0 +1,7 @@
+teamcity_user: teamcity
+teamcity_user_home: "/home/{{teamcity_user}}"
+teamcity_version: 8.1.3
+teamcity_download_path: "{{teamcity_user_home}}/TeamCity-{{version}}.tar.gz"
+teamcity_installation_directory: "{{teamcity_user_home}}"
+teamcity_installation_path: "{{install_dir}}/TeamCity"
+teamcity_data_path: "{{teamcity_user_home}}/TeamCityData"
