@@ -5,7 +5,7 @@
   get_url: url=http://download.jetbrains.com/teamcity/TeamCity-{{ teamcity_version }}.tar.gz dest={{ teamcity_download_path }}
 
 - name: Unpack team city archive
-  command: tar -xvzf "{{ teamcity_download_path }}" --directory "{{ teamcity_installation_directory }}" creates={{ teamcity_installation_path }}
+  command: "tar -xvzf {{ teamcity_download_path }} --directory {{ teamcity_installation_directory }} creates={{ teamcity_installation_path }}"
 
 - name: Change team city install directory owner
   file: path={{ teamcity_installation_path }} owner={{ teamcity_user }} group={{ teamcity_user }} recurse=yes state=directory
@@ -18,5 +18,3 @@
 
 - name: Stop teamcity
   service: name=teamcity state=stopped
-  
-
