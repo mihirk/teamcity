@@ -18,6 +18,7 @@
     "type": "ansible-local",
     "playbook_file": "provisioning/local.yml",
     "inventory_file": "provisioning/ansible_hosts",
-    "role_paths": ["provisioning/roles/apt-packages", "provisioning/roles/teamcity-setup"]
+    "role_paths": ["provisioning/roles/apt-packages", "provisioning/roles/teamcity-setup"],
+    "extra_arguments": ["-vvv"]
   }]
 }
