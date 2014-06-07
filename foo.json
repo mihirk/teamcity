@@ -1,0 +1,17 @@
+{
+  "builders": [{
+    "type": "digitalocean",
+    "api_key": "846dfa7bfb931e70d050ab2e8feac6ad",
+    "client_id": "a97841237ece51fd5aeee5a465984135",
+    "region_id": 4,
+    "image": "ubuntu-12.04-x32",
+    "size": "512mb",
+    "droplet_name": "foo"
+  }],
+
+  "provisioners": [{
+    "type": "ansible-local",
+    
+  }]
+
+}
