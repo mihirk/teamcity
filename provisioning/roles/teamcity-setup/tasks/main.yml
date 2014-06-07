@@ -8,7 +8,7 @@
   command: tar -xvzf "{{ teamcity_download_path }}" --directory "{{ teamcity_installation_directory }}" creates={{ teamcity_installation_path }}
 
 - name: Change team city install directory owner
-    file: path={{ teamcity_installation_path }} owner={{ teamcity_user }} group={{ teamcity_user }} recurse=yes state=directory
+  file: path={{ teamcity_installation_path }} owner={{ teamcity_user }} group={{ teamcity_user }} recurse=yes state=directory
 
 - name: Add teamcity service to init.d
   template: src=teamcity_service_script.sh.j2 dest=/etc/init.d/teamcity mode=755
