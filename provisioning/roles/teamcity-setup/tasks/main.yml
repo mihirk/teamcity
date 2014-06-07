@@ -2,7 +2,7 @@
   user: name={{ teamcity_user }} home={{ teamcity_user_home }} comment="Teamcity User" generate_ssh_key=yes
 
 - name: Download Team City
-  get_url: url=http://download.jetbrains.com/teamcity/TeamCity-{{ teamcity_version }}.tar.gz dest={{ teamcity_download_path }}
+  get_url: url={{ team_city_download_url }} dest={{ teamcity_download_path }}
 
 - name: Unpack team city archive
   command: "tar -xvzf {{ teamcity_download_path }} --directory {{ teamcity_installation_directory }} creates={{ teamcity_installation_path }}"
