@@ -6,7 +6,7 @@
     "region_id": 4,
     "image": "Ubuntu 12.04.4 x32",
     "size": "512mb",
-    "droplet_name": "foo"
+    "droplet_name": "teamcity"
   }],
 
   "provisioners": [
@@ -20,5 +20,9 @@
     "inventory_file": "provisioning/ansible_hosts",
     "role_paths": ["provisioning/roles/apt-packages", "provisioning/roles/teamcity-setup"],
     "extra_arguments": ["-vvv"]
+  },
+  {
+    "type": "shell",
+    "script": "uninstall_ansible.sh"
   }]
 }
