@@ -9,10 +9,15 @@
     "droplet_name": "foo"
   }],
 
-  "provisioners": [{
+  "provisioners": [
+  {
+    "type": "shell",
+    "script": "install_ansible.sh"
+  },
+  {
     "type": "ansible-local",
     "playbook_file": "provisioning/local.yml",
-    "inventory_file": "provisioning/ansible_hosts"
+    "inventory_file": "provisioning/ansible_hosts",
+    "role_paths": ["provisioning/roles/apt-packages", "teamcity-setup"]
   }]
-
 }
